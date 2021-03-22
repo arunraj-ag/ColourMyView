@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Database">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/some"
+        android:fontFamily="@font/helvetica"
+        android:text="A Database Example"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/title"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Name"
+        android:textColorHint="@color/black"/>
+
+    <EditText
+        android:id="@+id/contact"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:textColorHint="@color/black"
+        android:layout_below="@id/name"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Contact" />
+
+    <EditText
+        android:id="@+id/DOB"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:textColorHint="@color/black"
+        android:layout_below="@id/contact"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:hint="Enter DOB" />
+
+    <Button
+        android:id="@+id/insert_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DOB"
+        android:layout_centerInParent="true"
+        android:onClick="insert_db"
+        android:text="INSERT"
+        android:layout_marginTop="40dp"/>
+
+    <Button
+        android:id="@+id/update_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/insert_btn"
+        android:backgroundTint="@color/black"
+        android:onClick="update_db"
+        android:layout_centerInParent="true"
+        android:text="UPDATE"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/delete_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_below="@id/update_btn"
+        android:onClick="delete_db"
+        android:layout_centerInParent="true"
+        android:text="DELETE"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/view_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/delete_btn"
+        android:layout_centerInParent="true"
+        android:onClick="view_db"
+        android:backgroundTint="@color/teal_700"
+        android:text="VIEW"
+        android:layout_marginTop="10dp"/>
+
+
+</RelativeLayout>

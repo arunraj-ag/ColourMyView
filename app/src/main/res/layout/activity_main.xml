@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <TextView
+        android:id="@+id/box_one_txt"
+        style="@style/whiteBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/box_one"
+        android:onClick="box_one_method"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/box_two_txt"
+        style="@style/whiteBox"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:onClick="box_two_method"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/box_two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box_one_txt" />
+
+    <TextView
+        android:id="@+id/box_three_txt"
+        style="@style/whiteBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="box_three_method"
+        android:text="@string/box_three"
+        app:layout_constraintBottom_toTopOf="@+id/box_four_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/box_two_txt"
+        app:layout_constraintTop_toTopOf="@+id/box_two_txt" />
+
+    <TextView
+        android:id="@+id/box_four_txt"
+        style="@style/whiteBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="box_four_method"
+        android:text="@string/box_four"
+        app:layout_constraintBottom_toTopOf="@+id/box_five_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/box_two_txt"
+        app:layout_constraintTop_toBottomOf="@+id/box_three_txt" />
+
+    <TextView
+        android:id="@+id/box_five_txt"
+        style="@style/whiteBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:onClick="box_five_method"
+        android:layout_marginRight="16dp"
+        android:text="@string/box_five"
+        app:layout_constraintBottom_toBottomOf="@+id/box_two_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/box_two_txt"
+        app:layout_constraintTop_toBottomOf="@+id/box_four_txt" />
+
+    <Button
+        android:id="@+id/button_change_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:onClick="change_text"
+        android:text="Change Text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box_five_txt" />
+
+    <Button
+        android:id="@+id/notification_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/black"
+        android:text="Notification"
+        android:onClick="notification_method"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_change_txt" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Bitmap"
+        android:onClick="bitmap_intent_method"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notification_btn" />
+
+    <Button
+        android:id="@+id/database_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Database"
+        android:backgroundTint="@color/black"
+        android:onClick="database_intent_method"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
